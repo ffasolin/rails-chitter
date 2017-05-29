@@ -5,10 +5,12 @@ class CheetsController < ApplicationController
   end
 
   def create
-    # render plain: params[:cheets].inspect
     @cheet = Cheet.new(params.require(:cheets).permit(:text))
-    @cheet.save
-    redirect_to @cheet
+    if @cheet.save
+      redirect_to @cheet
+    else
+      render "new"
+    end
   end
 
   def show
