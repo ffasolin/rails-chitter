@@ -1,5 +1,7 @@
 class CheetsController < ApplicationController
-  def new
+
+  def index
+    @cheets = Cheet.all
   end
 
   def create
@@ -11,6 +13,9 @@ class CheetsController < ApplicationController
 
   def show
     @cheet = Cheet.find(params[:id])
+  end
+
+  def new
   end
 
   private

@@ -1,0 +1,13 @@
+<h1>Feed</h1>
+
+<table>
+  <tr>
+    <th>Text</th>
+  </tr>
+
+  <% @cheets.each do |cheet| %>
+    <tr>
+      <td><%= cheet.text %></td>
+    </tr>
+  <% end %>
+</table>
