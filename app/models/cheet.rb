@@ -1,0 +1,2 @@
+class Cheet < ApplicationRecord
+end
